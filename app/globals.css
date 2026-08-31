@@ -14,7 +14,6 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
 a { color: inherit; text-decoration: none; }
 img { display: block; object-fit: cover; }
-.print-url { display: none; }
 
 .project-index {
   position: relative;
@@ -186,22 +185,4 @@ img { display: block; object-fit: cover; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
-}
-
-@media print {
-  @page { margin: .7in .55in .6in; }
-
-  .print-url {
-    display: block;
-    position: fixed;
-    top: -.45in;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    margin: 0;
-    padding-bottom: .08in;
-    border-bottom: 1px solid #999;
-    color: #333;
-    font: 9pt/1.2 var(--font-mono);
-  }
 }
