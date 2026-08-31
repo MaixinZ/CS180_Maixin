@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Perspective, focal length, and the center of projection explored in three camera studies.",
 };
 
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const parts = [
   {
     number: "Part 1",
@@ -14,8 +16,8 @@ const parts = [
     method: "I took both selfies with my phone. For the left image, I held the camera about two inches from my face and used the 0.5× ultra-wide lens. For the right image, I moved the camera to roughly one arm’s length and used the standard 1× lens. The right portrait looks more natural, while the close ultra-wide image visibly distorts my face: my midface appears elongated and pushed outward, especially around my cheekbones.",
     result: "The improvement comes primarily from the greater camera-to-subject distance. At two inches, even small depth differences between features—such as my nose and ears—are large relative to the camera distance, so nearby features are exaggerated. Moving the camera farther away makes those differences proportionally smaller and reduces perspective distortion. The 1× lens then preserves a useful framing without the ultra-wide field of view, producing facial proportions that look closer to how they appear in person.",
     images: [
-      { src: "/images/project-0-selfie-close.jpg", label: "Close / wide", alt: "Close-up wide-angle portrait showing perspective distortion" },
-      { src: "/images/project-0-selfie-far.jpg", label: "Far / zoomed", alt: "Portrait taken from farther away with zoom" },
+      { src: `${assetPrefix}/images/project-0-selfie-close.jpg`, label: "Close / wide", alt: "Close-up wide-angle portrait showing perspective distortion" },
+      { src: `${assetPrefix}/images/project-0-selfie-far.jpg`, label: "Far / zoomed", alt: "Portrait taken from farther away with zoom" },
     ],
   },
   {
@@ -24,17 +26,17 @@ const parts = [
     method: "Both images show the Shake Shack restaurant next to my apartment. For the left image, I stood across the street and zoomed in on the building. For the right image, I moved to roughly three meters from the facade and photographed it from close range. Although the building occupies a similar portion of each frame, the distant view appears noticeably flatter than the close view.",
     result: "This difference is caused by perspective compression. From across the street, variations in distance between the camera and different parts of the building are small relative to the total camera distance, so the facade’s layers appear closer together. At three meters, those same depth differences become much more significant. Nearby elements look larger relative to elements farther away, creating a stronger and more obvious sense of depth.",
     images: [
-      { src: "/images/project-0-building-far.jpg", label: "Far / zoomed", alt: "Zoomed view of a Shake Shack building photographed from farther away" },
-      { src: "/images/project-0-building-near.jpg", label: "Near / wide", alt: "Wide-angle view of a Shake Shack building photographed from nearby" },
+      { src: `${assetPrefix}/images/project-0-building-far.jpg`, label: "Far / zoomed", alt: "Zoomed view of a Shake Shack building photographed from farther away" },
+      { src: `${assetPrefix}/images/project-0-building-near.jpg`, label: "Near / wide", alt: "Wide-angle view of a Shake Shack building photographed from nearby" },
     ],
   },
 ];
 
 const dollyFrames = [
-  { src: "/images/project-0-dolly-v2-frame-01.jpg", width: 4284, height: 5712 },
-  { src: "/images/project-0-dolly-v2-frame-02.jpg", width: 3024, height: 4032 },
-  { src: "/images/project-0-dolly-v2-frame-03.jpg", width: 4284, height: 5712 },
-  { src: "/images/project-0-dolly-v2-frame-04.jpg", width: 4284, height: 5712 },
+  { src: `${assetPrefix}/images/project-0-dolly-v2-frame-01.jpg`, width: 4284, height: 5712 },
+  { src: `${assetPrefix}/images/project-0-dolly-v2-frame-02.jpg`, width: 3024, height: 4032 },
+  { src: `${assetPrefix}/images/project-0-dolly-v2-frame-03.jpg`, width: 4284, height: 5712 },
+  { src: `${assetPrefix}/images/project-0-dolly-v2-frame-04.jpg`, width: 4284, height: 5712 },
 ];
 
 export default function ProjectZero() {
@@ -90,7 +92,7 @@ export default function ProjectZero() {
         <div className="dolly-result">
           <div className="dolly-result-image">
             <Image
-              src="/images/project-0-dolly-zoom-v2.gif"
+              src={`${assetPrefix}/images/project-0-dolly-zoom-v2.gif`}
               alt="Dolly zoom animation focused on a vase of flowers and a lamp"
               fill
               sizes="400px"
@@ -98,7 +100,7 @@ export default function ProjectZero() {
             />
           </div>
           <video className="dolly-result-video" controls playsInline preload="metadata">
-            <source src="/videos/project-0-dolly-zoom.mp4" type="video/mp4" />
+            <source src={`${assetPrefix}/videos/project-0-dolly-zoom.mp4`} type="video/mp4" />
             Your browser does not support embedded video.
           </video>
         </div>
