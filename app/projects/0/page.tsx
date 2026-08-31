@@ -42,6 +42,7 @@ const dollyFrames = [
 export default function ProjectZero() {
   return (
     <main className="report" id="main-content">
+      <p className="print-url" aria-hidden="true">https://maixinz.github.io/CS180_Maixin/projects/0/</p>
       <nav className="report-nav" aria-label="Project navigation">
         <Link href="/">← Projects</Link>
         <span>CS 180 / Project 0</span>

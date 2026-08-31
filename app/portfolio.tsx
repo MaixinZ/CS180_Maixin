@@ -14,6 +14,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <main className="project-index" id="main-content">
+      <p className="print-url" aria-hidden="true">https://maixinz.github.io/CS180_Maixin/</p>
       <div className="index-grid" aria-hidden="true" />
       <header className="index-header">
         <span>CS 180</span>
