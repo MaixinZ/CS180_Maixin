@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const projects = [
   {
     number: "00",
@@ -26,8 +28,8 @@ export default function Portfolio() {
         </div>
         <figure className="index-landscape">
           <Image
-            src="https://picsum.photos/seed/california-landscape/1600/900"
-            alt="Wooded landscape with a trail"
+            src={`${assetPrefix}/images/index-landscape.png`}
+            alt="Rolling California hills with a winding trail"
             fill
             priority
             sizes="(max-width: 720px) 75vw, 42vw"
