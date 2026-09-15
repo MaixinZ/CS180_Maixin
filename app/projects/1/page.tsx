@@ -14,16 +14,25 @@ const singleScaleResults = [
     title: "Cathedral",
     before: `${assetPrefix}/images/project-1-cathedral-before.jpg`,
     after: `${assetPrefix}/images/project-1-cathedral-after.jpg`,
+    redDisplacement: "(12, 3)",
+    greenDisplacement: "(5, 2)",
+    generationTime: "0.6s",
   },
   {
     title: "Monastery",
     before: `${assetPrefix}/images/project-1-monastery-before.jpg`,
     after: `${assetPrefix}/images/project-1-monastery-after.jpg`,
+    redDisplacement: "(3, 2)",
+    greenDisplacement: "(-3, 2)",
+    generationTime: "0.6s",
   },
   {
     title: "Tobolsk",
     before: `${assetPrefix}/images/project-1-tobolsk-before.jpg`,
     after: `${assetPrefix}/images/project-1-tobolsk-after.jpg`,
+    redDisplacement: "(6, 3)",
+    greenDisplacement: "(3, 2)",
+    generationTime: "0.6s",
   },
 ];
 
@@ -108,9 +117,9 @@ export default function ProjectOne() {
                 </figure>
               </div>
               <dl className="alignment-metadata">
-                <div><dt>Red displacement</dt><dd aria-label="To be added">&nbsp;</dd></div>
-                <div><dt>Green displacement</dt><dd aria-label="To be added">&nbsp;</dd></div>
-                <div><dt>Generation time</dt><dd aria-label="To be added">&nbsp;</dd></div>
+                <div><dt>Red displacement</dt><dd>{result.redDisplacement}</dd></div>
+                <div><dt>Green displacement</dt><dd>{result.greenDisplacement}</dd></div>
+                <div><dt>Generation time</dt><dd>{result.generationTime}</dd></div>
               </dl>
             </article>
           ))}
