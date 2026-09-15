@@ -162,6 +162,16 @@ img { display: block; object-fit: cover; }
 }
 .result-slot span { font: 600 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; }
 .result-slot p { margin: .75rem 0 0; color: var(--muted); line-height: 1.6; }
+.single-scale-results { display: grid; gap: 4.5rem; margin: 3rem 0 0 6.25rem; }
+.alignment-result h3 { margin: 0 0 1rem; font-size: 1.25rem; letter-spacing: -.025em; }
+.alignment-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.alignment-pair figure { margin: 0; }
+.alignment-pair img { width: 100%; height: auto; aspect-ratio: 396 / 341; background: var(--cream); object-fit: cover; }
+.alignment-pair figcaption { padding-top: .6rem; color: var(--muted); font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.alignment-metadata { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.75rem 0 0; }
+.alignment-metadata div { min-width: 0; }
+.alignment-metadata dt { color: var(--muted); font: 500 .7rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.alignment-metadata dd { min-height: 2rem; margin: .4rem 0 0; border-bottom: 1px solid var(--ink); }
 .dolly-result { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; width: 50%; margin-left: 6.25rem; }
 .dolly-result-image { position: relative; width: min(100%, 25rem); aspect-ratio: 400 / 534; overflow: hidden; background: var(--cream); }
 .dolly-result-video { display: block; width: min(100%, 25rem); aspect-ratio: 3 / 4; background: var(--ink); object-fit: contain; }
@@ -200,10 +210,12 @@ img { display: block; object-fit: cover; }
   .dolly-result { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem .75rem; }
   .dolly-result, .filmstrip { margin-left: 0; }
   .part-explanation { margin-left: 0; }
-  .project-one-copy, .alignment-steps, .result-slot { margin-left: 0; }
+  .project-one-copy, .alignment-steps, .result-slot, .single-scale-results { margin-left: 0; }
   .alignment-steps { grid-template-columns: 1fr; }
   .alignment-steps li { min-height: auto; }
   .alignment-steps span { margin-bottom: 1.5rem; }
+  .alignment-pair { grid-template-columns: 1fr; }
+  .alignment-metadata { grid-template-columns: 1fr; gap: 1.25rem; }
   .report-part:first-of-type .comparison { margin-left: 0; }
   .report-part:nth-of-type(2) .comparison { margin-left: 0; }
   .comparison { grid-template-columns: 1fr; }

@@ -1,10 +1,31 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Project 1 - Images of the Russian Empire",
   description: "Reconstructing Prokudin-Gorskii's glass plate photographs with single-scale and multiscale image alignment.",
 };
+
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const singleScaleResults = [
+  {
+    title: "Cathedral",
+    before: `${assetPrefix}/images/project-1-cathedral-before.jpg`,
+    after: `${assetPrefix}/images/project-1-cathedral-after.jpg`,
+  },
+  {
+    title: "Monastery",
+    before: `${assetPrefix}/images/project-1-monastery-before.jpg`,
+    after: `${assetPrefix}/images/project-1-monastery-after.jpg`,
+  },
+  {
+    title: "Tobolsk",
+    before: `${assetPrefix}/images/project-1-tobolsk-before.jpg`,
+    after: `${assetPrefix}/images/project-1-tobolsk-after.jpg`,
+  },
+];
 
 export default function ProjectOne() {
   return (
@@ -60,9 +81,39 @@ export default function ProjectOne() {
             This direct search is practical for the smaller JPEG plates, where the correct offset is limited to a few pixels. Result images, channel offsets, and the selected scoring metric will be presented here.
           </p>
         </div>
-        <div className="result-slot" role="note">
-          <span>Single-scale results</span>
-          <p>Add the aligned JPEG outputs and their green and red displacement vectors.</p>
+        <div className="single-scale-results" aria-label="Single-scale alignment results">
+          {singleScaleResults.map((result) => (
+            <article className="alignment-result" key={result.title}>
+              <h3>{result.title}</h3>
+              <div className="alignment-pair">
+                <figure>
+                  <Image
+                    src={result.before}
+                    alt={`${result.title} color channels before alignment`}
+                    width={396}
+                    height={341}
+                    sizes="(max-width: 720px) 100vw, 34vw"
+                  />
+                  <figcaption>Before alignment</figcaption>
+                </figure>
+                <figure>
+                  <Image
+                    src={result.after}
+                    alt={`${result.title} color channels after single-scale alignment`}
+                    width={396}
+                    height={341}
+                    sizes="(max-width: 720px) 100vw, 34vw"
+                  />
+                  <figcaption>After alignment</figcaption>
+                </figure>
+              </div>
+              <dl className="alignment-metadata">
+                <div><dt>Red displacement</dt><dd aria-label="To be added">&nbsp;</dd></div>
+                <div><dt>Green displacement</dt><dd aria-label="To be added">&nbsp;</dd></div>
+                <div><dt>Generation time</dt><dd aria-label="To be added">&nbsp;</dd></div>
+              </dl>
+            </article>
+          ))}
         </div>
       </section>
 
