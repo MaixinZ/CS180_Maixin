@@ -9,6 +9,11 @@ const projects = [
     title: "Becoming friends with your camera",
     href: "/projects/0",
   },
+  {
+    number: "01",
+    title: "Images of the Russian Empire",
+    href: "/projects/1",
+  },
 ];
 
 export default function Portfolio() {
