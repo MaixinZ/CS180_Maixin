@@ -136,25 +136,16 @@ img { display: block; object-fit: cover; }
 .part-explanation { max-width: 46rem; margin: 3rem 0 0 6.25rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); line-height: 1.7; }
 .part-explanation p { margin: 0; }
 .part-explanation p + p { margin-top: 1rem; }
-.project-one-copy { max-width: 46rem; margin-left: 6.25rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+.project-one-copy { width: 100%; color: var(--muted); font-size: 1rem; line-height: 1.75; }
 .project-one-copy p { margin: 0; }
 .project-one-copy p + p { margin-top: 1.25rem; }
-.alignment-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin: 3rem 0 0 6.25rem;
-  padding: 0;
-  max-width: 58rem;
-  background: var(--line);
-  list-style: none;
-}
-.alignment-steps li { min-height: 12rem; padding: 1.25rem; background: var(--paper); }
-.alignment-steps span { display: block; margin-bottom: 2.5rem; color: var(--muted); font: 500 .7rem/1 var(--font-mono); }
-.alignment-steps strong { display: block; font-size: 1.2rem; letter-spacing: -.02em; }
-.alignment-steps p { margin: .75rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+.project-one-copy code { padding: .12rem .3rem; background: var(--cream); font: .9em/1.4 var(--font-mono); }
+.math-equation { display: flex; align-items: center; gap: .55rem; margin: 1.5rem 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1rem, 2vw, 1.25rem); overflow-x: auto; }
+.math-fraction { display: inline-grid; grid-template-rows: auto auto; text-align: center; white-space: nowrap; }
+.math-fraction > span:first-child { padding: 0 .5rem .28rem; border-bottom: 1px solid currentColor; }
+.math-fraction > span:last-child { padding: .28rem .5rem 0; }
 .result-slot {
-  margin: 3rem 0 0 6.25rem;
+  margin: 3rem 0 0;
   padding: 2rem;
   max-width: 46rem;
   border: 1px dashed var(--muted);
@@ -162,16 +153,27 @@ img { display: block; object-fit: cover; }
 }
 .result-slot span { font: 600 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; }
 .result-slot p { margin: .75rem 0 0; color: var(--muted); line-height: 1.6; }
-.single-scale-results { display: grid; gap: 4.5rem; margin: 3rem 0 0 6.25rem; }
-.alignment-result h3 { margin: 0 0 1rem; font-size: 1.25rem; letter-spacing: -.025em; }
-.alignment-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.alignment-pair figure { margin: 0; }
-.alignment-pair img { width: 100%; height: auto; aspect-ratio: 396 / 341; background: var(--cream); object-fit: cover; }
-.alignment-pair figcaption { padding-top: .6rem; color: var(--muted); font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
-.alignment-metadata { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.75rem 0 0; }
-.alignment-metadata div { min-width: 0; text-align: center; }
-.alignment-metadata dt { color: var(--muted); font: 500 .7rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
-.alignment-metadata dd { margin: .65rem 0 0; font-size: .95rem; font-weight: 600; }
+.single-scale-results { display: grid; gap: 3.5rem; margin: 3rem 0 0; }
+.alignment-row h3 { margin: 0 0 1rem; font-size: 1.1rem; letter-spacing: -.025em; }
+.alignment-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.alignment-gallery figure { margin: 0; }
+.alignment-gallery img { width: 100%; height: auto; aspect-ratio: 396 / 341; background: var(--cream); object-fit: cover; }
+.alignment-gallery figcaption { padding-top: .6rem; color: var(--muted); font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.alignment-table-wrap { overflow-x: auto; }
+.alignment-table { width: 100%; border-collapse: collapse; text-align: left; }
+.alignment-table caption { margin-bottom: 1rem; text-align: left; font-size: 1.1rem; font-weight: 650; letter-spacing: -.025em; }
+.alignment-table th, .alignment-table td { padding: 1rem .75rem; border-bottom: 1px solid var(--line); }
+.alignment-table thead th { color: var(--muted); font: 500 .7rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.alignment-table tbody th { font-size: .95rem; }
+.alignment-table td { font: 500 .9rem/1.4 var(--font-mono); }
+.alignment-table .alignment-order { width: 3rem; color: var(--muted); font: 500 .75rem/1.4 var(--font-mono); }
+.multiscale-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 1rem; margin-top: 3rem; }
+.multiscale-gallery figure { min-width: 0; margin: 0; }
+.multiscale-gallery img { width: 100%; height: auto; background: var(--cream); }
+.multiscale-gallery figcaption { padding-top: .6rem; color: var(--muted); font: 500 .7rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.failure-reason-link { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.alignment-failure-note { scroll-margin-top: 2rem; margin: 2rem 0 0; padding-top: 2rem; border-top: 1px solid var(--line); line-height: 1.75; }
+.multiscale-table-wrap { margin-top: 4rem; }
 .dolly-result { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; width: 50%; margin-left: 6.25rem; }
 .dolly-result-image { position: relative; width: min(100%, 25rem); aspect-ratio: 400 / 534; overflow: hidden; background: var(--cream); }
 .dolly-result-video { display: block; width: min(100%, 25rem); aspect-ratio: 3 / 4; background: var(--ink); object-fit: contain; }
@@ -210,12 +212,10 @@ img { display: block; object-fit: cover; }
   .dolly-result { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem .75rem; }
   .dolly-result, .filmstrip { margin-left: 0; }
   .part-explanation { margin-left: 0; }
-  .project-one-copy, .alignment-steps, .result-slot, .single-scale-results { margin-left: 0; }
-  .alignment-steps { grid-template-columns: 1fr; }
-  .alignment-steps li { min-height: auto; }
-  .alignment-steps span { margin-bottom: 1.5rem; }
-  .alignment-pair { grid-template-columns: 1fr; }
-  .alignment-metadata { grid-template-columns: 1fr; gap: 1.25rem; }
+  .project-one-copy, .result-slot, .single-scale-results { margin-left: 0; }
+  .alignment-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
+  .alignment-table { min-width: 35rem; }
+  .multiscale-gallery { grid-template-columns: 1fr; gap: 2rem; }
   .report-part:first-of-type .comparison { margin-left: 0; }
   .report-part:nth-of-type(2) .comparison { margin-left: 0; }
   .comparison { grid-template-columns: 1fr; }
