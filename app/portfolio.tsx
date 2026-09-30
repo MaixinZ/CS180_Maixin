@@ -14,6 +14,11 @@ const projects = [
     title: "Images of the Russian Empire",
     href: "/projects/1",
   },
+  {
+    number: "02",
+    title: "Fun with Filters and Frequencies!",
+    href: "/projects/2",
+  },
 ];
 
 export default function Portfolio() {
