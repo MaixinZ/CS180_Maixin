@@ -214,10 +214,11 @@ img { display: block; object-fit: cover; }
 .project-three-comparison-grid figure { min-width: 0; margin: 0; }
 .project-three-comparison-grid img { width: 100%; height: auto; background: var(--cream); }
 .project-three-comparison-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
-.project-three-sample-grid { display: grid; grid-template-columns: repeat(5, minmax(calc((100% - 3rem) / 4), 1fr)); gap: 1rem; margin-top: 3rem; padding-bottom: .75rem; overflow-x: auto; }
+.project-three-sample-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; }
 .project-three-sample-grid figure { min-width: 0; margin: 0; }
 .project-three-sample-grid img { width: 100%; height: auto; background: var(--cream); }
 .project-three-sample-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-sample-comparison { margin-top: 1.5rem; }
 .project-three-edit-results { display: grid; gap: 3rem; margin-top: 3rem; }
 .project-three-edit-results figure { min-width: 0; margin: 0; }
 .project-three-edit-results figure > figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }

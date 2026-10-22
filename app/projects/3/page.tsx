@@ -541,6 +541,15 @@ export default function ProjectThree() {
               </figure>
             ))}
           </div>
+          <div className="project-one-copy project-three-sample-comparison">
+            <p>
+              Compared with the generated images in Section 1.6, the images generated using
+              classifier-free guidance have significantly higher quality and look more natural.
+              This is because classifier-free guidance amplifies the difference between the
+              conditional and unconditional predictions, pushing each sample more strongly toward
+              features that match the prompt and away from generic or noisy outputs.
+            </p>
+          </div>
         </section>
 
         <section className="filter-subpart" id="a3">
