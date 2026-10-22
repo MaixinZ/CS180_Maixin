@@ -139,6 +139,8 @@ img { display: block; object-fit: cover; }
 .project-one-copy { width: 100%; color: var(--muted); font-size: 1rem; line-height: 1.75; }
 .project-one-copy p { margin: 0; }
 .project-one-copy p + p { margin-top: 1.25rem; }
+.project-one-copy ol { margin: 1.25rem 0; padding-left: 1.5rem; }
+.project-one-copy li + li { margin-top: .85rem; }
 .project-one-copy code { padding: .12rem .3rem; background: var(--cream); font: .9em/1.4 var(--font-mono); }
 .math-equation { display: flex; align-items: center; gap: .55rem; margin: 1.5rem 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1rem, 2vw, 1.25rem); overflow-x: auto; }
 .math-fraction { display: inline-grid; grid-template-rows: auto auto; text-align: center; white-space: nowrap; }
@@ -175,6 +177,76 @@ img { display: block; object-fit: cover; }
 .alignment-failure-note { scroll-margin-top: 2rem; margin: 2rem 0 0; padding-top: 2rem; border-top: 1px solid var(--line); line-height: 1.75; }
 .multiscale-table-wrap { margin-top: 4rem; }
 .project-two-jump { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.project-three-experiment { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--line); }
+#a1-1 { margin-top: 2rem; padding-top: 0; border-top: 0; }
+.project-three-noise-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; width: 100%; margin-top: 3rem; }
+.project-three-noise-grid figure { min-width: 0; margin: 0; }
+.project-three-noise-grid img { width: 100%; height: auto; background: var(--cream); }
+.project-three-noise-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-denoise-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 1rem; width: 50%; margin-top: 3rem; }
+.project-three-denoise-grid figure { min-width: 0; margin: 0; }
+.project-three-denoise-grid img { width: 100%; height: auto; background: var(--cream); }
+.project-three-denoise-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-one-step-results { display: grid; gap: 3rem; margin-top: 3rem; }
+.project-three-one-step-row h4 { margin: 0 0 1rem; font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; }
+.project-three-one-step-row > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; width: 75%; }
+.project-three-one-step-row figure { min-width: 0; margin: 0; }
+.project-three-one-step-row img { width: 100%; height: auto; background: var(--cream); }
+.project-three-one-step-row figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-velocity-results { display: grid; gap: 3rem; margin-top: 3rem; }
+.project-three-velocity-original { width: 25%; margin: 0; }
+.project-three-velocity-original img { width: 100%; height: auto; background: var(--cream); }
+.project-three-velocity-original figcaption { padding-top: .7rem; color: var(--muted); font: 500 .68rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .035em; }
+.project-three-velocity-row h4 { margin: 0 0 1rem; font: 500 .72rem/1 var(--font-mono); text-align: center; text-transform: uppercase; letter-spacing: .05em; }
+.project-three-velocity-row > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.project-three-velocity-row figure { min-width: 0; margin: 0; }
+.project-three-velocity-row img { width: 100%; height: auto; background: var(--cream); }
+.project-three-velocity-row figcaption { padding-top: .7rem; color: var(--muted); font: 500 .68rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .035em; }
+.project-three-euler-figure { margin: 3rem 0 0; }
+.project-three-euler-figure > figcaption { margin-bottom: 1rem; font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-euler-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 1rem; width: 75%; }
+.project-three-euler-grid figure { min-width: 0; margin: 0; }
+.project-three-euler-grid img { width: 100%; height: auto; background: var(--cream); }
+.project-three-euler-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-comparison-figure { margin: 4rem 0 0; padding-top: 4rem; border-top: 1px solid var(--line); }
+.project-three-comparison-figure > figcaption { margin-bottom: 1rem; font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-comparison-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.project-three-comparison-grid figure { min-width: 0; margin: 0; }
+.project-three-comparison-grid img { width: 100%; height: auto; background: var(--cream); }
+.project-three-comparison-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-sample-grid { display: grid; grid-template-columns: repeat(5, minmax(calc((100% - 3rem) / 4), 1fr)); gap: 1rem; margin-top: 3rem; padding-bottom: .75rem; overflow-x: auto; }
+.project-three-sample-grid figure { min-width: 0; margin: 0; }
+.project-three-sample-grid img { width: 100%; height: auto; background: var(--cream); }
+.project-three-sample-grid figcaption { padding-top: .7rem; color: var(--muted); font: 500 .72rem/1.35 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+.project-three-edit-results { display: grid; gap: 3rem; margin-top: 3rem; }
+.project-three-edit-results figure { min-width: 0; margin: 0; }
+.project-three-edit-results figure > figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-edit-results img { display: block; width: 100%; height: auto; background: var(--cream); }
+.project-three-edit-subtitle { margin: 4rem 0 0; color: var(--ink); font-size: clamp(1.25rem, 2.5vw, 1.75rem); letter-spacing: -.035em; }
+.project-three-anagram-figure { margin: 3rem 0 0; }
+.project-three-anagram-figure figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-anagram-figure img { display: block; width: min(100%, 58rem); height: auto; background: var(--cream); }
+.project-three-hybrid-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 23.375rem)); gap: 2rem; margin-top: 3rem; }
+.project-three-hybrid-figure { min-width: 0; margin: 0; }
+.project-three-hybrid-figure figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-hybrid-figure > img { display: block; width: 100%; height: auto; background: var(--cream); }
+.project-three-lowpass-preview { width: 20%; margin-top: 1rem; }
+.project-three-lowpass-preview img { display: block; width: 100%; height: auto; background: var(--cream); }
+.project-three-model-diagrams { display: grid; gap: 3rem; margin-top: 3rem; }
+.project-three-model-diagrams img { display: block; width: 100%; height: auto; background: white; }
+.project-three-noising-figure { margin: 3rem 0 0; }
+.project-three-noising-figure figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-noising-figure img { display: block; width: 100%; height: auto; background: white; }
+.project-three-training-figure { margin: 3rem 0 0; }
+.project-three-training-figure > figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-training-figure > div { display: grid; gap: 2rem; }
+.project-three-training-figure img { display: block; width: min(100%, 59.375rem); height: auto; background: white; }
+.project-three-loss-figure { margin: 3rem 0 0; }
+.project-three-loss-figure figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-loss-figure p { max-width: 48rem; margin: 0 0 1.5rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+.project-three-loss-figure img { display: block; width: min(100%, 43.8125rem); height: auto; background: white; }
+.project-three-ood-figure { margin: 3rem 0 0; }
+.project-three-ood-figure img { display: block; width: min(100%, 66.6875rem); height: auto; background: white; }
 .filter-subpart { scroll-margin-top: 1.5rem; padding-top: 4rem; }
 .filter-subpart + .filter-subpart { margin-top: 5rem; border-top: 1px solid var(--line); }
 .project-two #filters > .part-heading { margin-bottom: 0; }

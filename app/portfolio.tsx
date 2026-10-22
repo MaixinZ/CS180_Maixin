@@ -19,6 +19,11 @@ const projects = [
     title: "Fun with Filters and Frequencies!",
     href: "/projects/2",
   },
+  {
+    number: "03",
+    title: "Fun with Flow Models",
+    href: "/projects/3",
+  },
 ];
 
 export default function Portfolio() {
