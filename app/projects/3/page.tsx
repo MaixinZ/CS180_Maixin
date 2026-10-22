@@ -1131,7 +1131,10 @@ export default function ProjectThree() {
             <div className="project-one-copy">
               <p>
                 I sampled four instances of every MNIST class using classifier-free guidance, with
-                each column corresponding to a requested digit from 0 through 9.
+                each column corresponding to a requested digit from 0 through 9. Compared with the
+                samples from the time-conditioned UNet in Part 2.3, these results are more
+                consistently recognizable and aligned with the requested digits because class
+                conditioning explicitly guides each sampling trajectory toward a specific label.
               </p>
             </div>
             <figure className="project-three-training-figure">
@@ -1194,6 +1197,48 @@ export default function ProjectThree() {
                   height={278}
                   sizes="(max-width: 720px) 100vw, 55vw"
                 />
+              </figure>
+              <div className="project-one-copy project-three-no-scheduler-summary">
+                <p>
+                  The class-conditioned UNet trained without a learning-rate scheduler converges
+                  more slowly: some samples remain malformed at epoch 10. By epoch 15, however, the
+                  generated digits are highly recognizable and comparable in quality to those
+                  produced by the model with a scheduler, showing that additional training epochs
+                  can compensate for removing the scheduler.
+                </p>
+              </div>
+              <figure className="project-three-no-scheduler-samples">
+                <figcaption>Sampling without a Learning-Rate Scheduler</figcaption>
+                <div>
+                  <Image
+                    src={`${assetPrefix}/images/project-3/class-no-scheduler-samples-epoch-1.png`}
+                    alt="Class-conditioned MNIST samples trained without a learning-rate scheduler after epoch 1"
+                    width={1155}
+                    height={496}
+                    sizes="(max-width: 720px) 50vw, 45vw"
+                  />
+                  <Image
+                    src={`${assetPrefix}/images/project-3/class-no-scheduler-samples-epoch-5.png`}
+                    alt="Class-conditioned MNIST samples trained without a learning-rate scheduler after epoch 5"
+                    width={1155}
+                    height={496}
+                    sizes="(max-width: 720px) 50vw, 45vw"
+                  />
+                  <Image
+                    src={`${assetPrefix}/images/project-3/class-no-scheduler-samples-epoch-10.png`}
+                    alt="Class-conditioned MNIST samples trained without a learning-rate scheduler after epoch 10"
+                    width={1155}
+                    height={496}
+                    sizes="(max-width: 720px) 50vw, 45vw"
+                  />
+                  <Image
+                    src={`${assetPrefix}/images/project-3/class-no-scheduler-samples-epoch-15.png`}
+                    alt="Class-conditioned MNIST samples trained without a learning-rate scheduler after epoch 15"
+                    width={1155}
+                    height={496}
+                    sizes="(max-width: 720px) 50vw, 45vw"
+                  />
+                </div>
               </figure>
             </section>
           </section>

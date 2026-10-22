@@ -246,6 +246,11 @@ img { display: block; object-fit: cover; }
 .project-three-loss-figure figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
 .project-three-loss-figure p { max-width: 48rem; margin: 0 0 1.5rem; color: var(--muted); font-size: 1rem; line-height: 1.75; }
 .project-three-loss-figure img { display: block; width: min(100%, 43.8125rem); height: auto; background: white; }
+.project-three-no-scheduler-summary { margin-top: 3rem; }
+.project-three-no-scheduler-samples { margin: 1.5rem 0 0; }
+.project-three-no-scheduler-samples > figcaption { margin-bottom: 1rem; color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.02em; }
+.project-three-no-scheduler-samples > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.project-three-no-scheduler-samples img { display: block; width: 100%; height: auto; background: white; }
 .project-three-ood-figure { margin: 3rem 0 0; }
 .project-three-ood-figure img { display: block; width: min(100%, 66.6875rem); height: auto; background: white; }
 .filter-subpart { scroll-margin-top: 1.5rem; padding-top: 4rem; }
