@@ -386,6 +386,9 @@ img { display: block; object-fit: cover; }
 .project-four-rectification-row > figure > img { width: 100%; height: auto; background: var(--cream); }
 .project-four-rectification-row .project-four-square-source > img { aspect-ratio: 1; object-fit: cover; object-position: center; }
 .project-four-rectification figcaption { padding-top: .7rem; color: var(--muted); font: 500 .68rem/1.4 var(--font-mono); letter-spacing: .035em; text-transform: uppercase; }
+.project-four-rectification-detail-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; width: 20%; margin-top: 2rem; }
+.project-four-rectification-detail-row img { width: 100%; height: auto; background: var(--cream); }
+.project-four-rectification-detail-note { max-width: 40rem; margin: 1rem 0 0; color: var(--muted); line-height: 1.7; }
 .project-four-warp-crop { position: relative; aspect-ratio: 370 / 365; overflow: hidden; background: #000; }
 .project-four-warp-crop img { position: absolute; top: -39.73%; left: -14.05%; width: 129.73%; max-width: none; height: auto; transform: scaleX(-1); }
 .project-four-rectified-square { width: auto; margin: 0 !important; }
@@ -469,6 +472,7 @@ img { display: block; object-fit: cover; }
   .project-four-correspondence-images { grid-template-columns: 1fr; }
   .project-four-photo-set > div { grid-template-columns: 1fr; }
   .project-four-rectification-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .project-four-rectification-detail-row { width: 50%; }
   .project-four-rectified-square { width: auto; }
   .project-four-wall-warp > div { grid-template-columns: 1fr; gap: 2rem; }
   .project-four-mosaic-sources, .project-four-mosaic-sources-two, .project-four-mosaic-placeholders { grid-template-columns: 1fr; }

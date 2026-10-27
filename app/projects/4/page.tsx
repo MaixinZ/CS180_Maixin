@@ -425,6 +425,35 @@ Aᵢh = bᵢ`}</pre>
                   <figcaption>Rectified square image</figcaption>
                 </figure>
               </div>
+
+              <div className="project-four-rectification-detail-row">
+                <figure>
+                  <Image
+                    src={`${assetPrefix}/images/project-4/rectification-ondine-nearest-neighbor-smile.png`}
+                    alt="Magnified Little Ondine smile logo using nearest-neighbor interpolation"
+                    width={600}
+                    height={450}
+                    sizes="(max-width: 720px) 100vw, 50vw"
+                  />
+                  <figcaption>Nearest neighbor</figcaption>
+                </figure>
+                <figure>
+                  <Image
+                    src={`${assetPrefix}/images/project-4/rectification-ondine-bilinear-smile.png`}
+                    alt="Magnified Little Ondine smile logo using bilinear interpolation"
+                    width={600}
+                    height={450}
+                    sizes="(max-width: 720px) 100vw, 50vw"
+                  />
+                  <figcaption>Bilinear</figcaption>
+                </figure>
+              </div>
+              <p className="project-four-rectification-detail-note">
+                In the enlarged smile logo, nearest-neighbor interpolation produces more abrupt,
+                block-like pixel transitions, while bilinear interpolation blends adjacent pixels
+                to create smoother edges. The difference is subtle at the original display size
+                but becomes clearer when the small feature is magnified.
+              </p>
             </div>
 
             <div className="project-four-wall-warp">
