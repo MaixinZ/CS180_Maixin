@@ -24,6 +24,11 @@ const projects = [
     title: "Fun with Flow Models",
     href: "/projects/3",
   },
+  {
+    number: "04",
+    title: "(Auto)stitching and Photo Mosaics",
+    href: "/projects/4",
+  },
 ];
 
 export default function Portfolio() {
